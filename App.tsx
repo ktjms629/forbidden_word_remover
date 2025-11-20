@@ -92,7 +92,7 @@ const App: React.FC = () => {
       // Escaping each word prevents regex special characters from breaking the pattern
       const forbiddenPattern = new RegExp(
         Array.from(forbiddenWords)
-             .map(word => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) // Escape special regex chars
+             .map((word: string) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) // Escape special regex chars
              .join('|'),
         'gi' // global and case-insensitive
       );
@@ -120,7 +120,7 @@ const App: React.FC = () => {
     }
 
     // Get all unique fields from the processed data to ensure all columns are present
-    const allFields = Array.from(new Set(processedProductData.flatMap(row => Object.keys(row))));
+    const allFields: string[] = Array.from(new Set(processedProductData.flatMap((row): string[] => Object.keys(row) as string[])));
     const csv = generateCsvString(processedProductData, allFields);
     
     const blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), csv], { type: 'text/csv;charset=utf-8;' }); // Add BOM for UTF-8 compatibility
