@@ -1,0 +1,5 @@
+
+{
+  "name": "Forbidden Word Remover",
+  "description": "A React web application to remove specified forbidden words from product names in a CSV file and output the cleaned data."
+}
