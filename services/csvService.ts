@@ -1,6 +1,6 @@
 
 import Papa from 'papaparse';
-import { ProductRow, CsvData } from '@/types';
+import { ProductRow, CsvData } from '../types';
 
 /**
  * Parses a CSV file into a structured object using PapaParse.

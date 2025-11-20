@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ProductRow } from '@/types';
+import { ProductRow } from '../types';
 
 interface ProductTableProps {
   products: ProductRow[];

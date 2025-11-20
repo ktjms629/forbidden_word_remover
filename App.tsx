@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { parseCsvFile, generateCsvString } from '@/services/csvService';
-import FileUpload from '@/components/FileUpload';
-import ProductTable from '@/components/ProductTable';
-import { ProductRow } from '@/types';
+import { parseCsvFile, generateCsvString } from './services/csvService';
+import FileUpload from './components/FileUpload';
+import ProductTable from './components/ProductTable';
+import { ProductRow } from './types';
 
 const App: React.FC = () => {
   const [forbiddenWordsFile, setForbiddenWordsFile] = useState<File | null>(null);
